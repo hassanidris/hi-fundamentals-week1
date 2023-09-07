@@ -56,6 +56,10 @@ p {
 }
 
 /*  setup the body  */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--ff-josefinSans);
   font-size: var(--fs-200);
@@ -305,7 +309,7 @@ a {
 }
 .second-booking__block {
   background-color: var(--clr-white);
-  opacity: 0.6;
+  opacity: 0.7;
   border-radius: 0.5em;
 }
 
@@ -434,6 +438,33 @@ a {
     text-align: center;
   }
 }
+#progress {
+  background-color: var(--clr-royalBlue);
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  width: 70px;
+  height: 70px;
+  display: none;
+  place-items: center;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  color: var(--clr-royalBlue);
+  z-index: 999;
+}
+
+#progress-value {
+  display: block;
+  height: calc(100% - 15px);
+  width: calc(100% - 15px);
+  background-color: var(--clr-white);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 35px;
+}
+
 @media screen and (max-width: 480px) {
   .nav {
     padding: 0 0.5em;
