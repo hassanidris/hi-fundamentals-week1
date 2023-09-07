@@ -198,7 +198,9 @@ a {
   position: relative;
   height: 320px;
   margin: 2rem 1rem;
-  background: url(/assets/img/sl_exceptional-experiences.jpg) no-repeat;
+  background-image: url(/assets/img/sl_exceptional-experiences.jpg);
+  background-repeat: no-repeat;
+  background-color: white;
   background-position: 100% 90%;
   background-size: cover;
   border-radius: 8px;
