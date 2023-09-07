@@ -1,0 +1,634 @@
+/* ------------------- */
+/* Custom Properties   */
+/* ------------------- */
+:root {
+    /*  Colors  */
+    --clr-black: hsl(0, 0%, 7%);
+    --clr-royalBlue: hsl(229, 98%, 66%);
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-nero: hsl(0, 0%, 14%);
+    /*  font-size  */
+    --fs-700: 3rem;
+    --fs-600: 2.25rem;
+    --fs-500: 1.5rem;
+    --fs-400: 1.375rem;
+    --fs-300: 1.25rem;
+    --fs-200: 1rem;
+    --fs-100: .875rem;
+    /*  font-family  */
+    --ff-josefinSans: 'Josefin Sans', sans-serif;
+    --ff-aleo: 'Aleo', serif;
+    /*  font-weight  */
+    --fw-700: 700;
+    --fw-400: 400;
+  }
+  
+  /* ------------------- */
+  /* Reset               */
+  /* ------------------- */
+  /*  Box sizing  */
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  /*  Reset Margins  */
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  p,
+  figure,
+  picture {
+    margin: 0;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  p {
+    font-weight: 200;
+  }
+  
+  /*  setup the body  */
+  body {
+    font-family: var(--ff-josefinSans);
+    font-size: var(--fs-200);
+    color: hsl(var(--clr-white));
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+  
+  /*  make images easier to work with  */
+  img,
+  picture {
+    max-width: 100%;
+    // display: block;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+
+ 
+  
+  
+  
+  /* ------------------- */
+  /* Utility classes     */
+  /* ------------------- */
+
+  
+.container {
+  padding-inline: 2em;
+  margin-inline: auto;
+  max-width: 75rem;
+}
+
+.section-btn {
+  background-color: var(--clr-royalBlue);
+  border: 0;
+  color: var(--clr-white);
+  padding: 1em 5em;
+  margin-top: 1em;
+  border-radius: .5em;
+}
+
+.section-btn:hover {
+  background-color: var(--clr-nero);
+}
+  
+  
+
+  
+/* ---------- Header Section ------------- */
+.header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  justify-content: flex-start;
+  background: url(../img/bnr_img.png) no-repeat;
+  background-size: cover;
+  background-position: top left;
+  z-index: -99999;
+}
+  
+.nav {
+  // position: fixed;
+  display: flex;
+  flex-basis: 100%;
+  gap: var(--gap, 0.6rem);
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 6em;
+  background-color: var(--clr-white);
+  order: 2;
+  width: 100%;
+
+  &__logo {
+    // display: block;
+    width: 200px;
+  }
+
+  &__topnav {
+    overflow: hidden;
+
+    a {
+      float: left;
+      display: block;
+      color: var(--clr-royalBlue);
+      text-align: center;
+      padding: .875em 1.5em;
+      
+      &:hover, &:focus, &:active {
+        background-color: var(--clr-white);
+        color: var(--clr-royalBlue);
+      }
+    }
+    .icon {
+      display: none;
+    }
+  }
+}
+
+
+
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  color: var(--clr-white);
+
+  &__title {
+    font-family: var(--ff-josefinSans);
+    font-size: var(--fs-700);
+    font-weight: var(--fw-700);
+    text-transform: uppercase;
+  }
+
+  &__desc {
+    font-size: var(--fs-400);
+    letter-spacing: .5em;
+    text-align: center;
+  }   
+}
+
+
+/* --------- Choose Section -------- */
+
+.choose {
+  background-color: #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3em 8em;
+  gap: var(--gap, 3em);
+
+  &__content {
+    width: 100%;
+
+    &--title {
+      font-size: var(--fs-600);
+      font-family: var(--ff-aleo);
+      text-align: center;
+      color: var(--clr-black);
+      font-weight: 900;
+    }
+
+      @media screen and (max-width: 650px) {
+        width: 100%;
+      }
+  }
+}
+
+  // &__image {
+  //   display: flex;
+  //   flex-direction: column;
+  //   gap: var(--gap, 1em);
+  //   width: 40%;
+    
+  //     &--first {
+  //       width: 250px;
+  //     }
+
+  //     &--second {
+  //       width: 250px;
+  //       margin-left: 2.5em;
+  //     }
+  // }
+
+
+.slider-container {
+  display: flex;
+  padding: 0 2rem;
+  overflow-x: auto;
+  background-color: #eee;
+  scroll-snap-type: both mandatory;
+  
+}
+      
+.card {
+  position: relative;
+  height: 320px;
+  margin: 2rem 1rem;
+  background: url(/assets/img/sl_exceptional-experiences.jpeg) no-repeat white;
+  background-position: 100% 90%;
+  background-size: cover;
+  border-radius: 8px;
+  box-shadow: 0 0 0 1px lightgray;
+  scroll-snap-align: start;
+  scroll-margin: 2rem;
+  transition: all .4s ease-in-out;
+  
+  &:nth-child(2) {
+    background-image: url(/assets/img/sl_global-destinations.png);
+  }
+  
+  &:nth-child(3) {
+    background-image: url(/assets/img/sl_personalized-service.jpeg);
+  }
+  
+  &:nth-child(4) {
+    background-image: url(/assets/img/sl_best-price-guarantee.jpeg);
+  }
+  
+  &:nth-child(5) {
+    background-image: url(/assets/img/sl_safety-first.jpeg);
+  }
+
+  &:hover {
+    box-shadow: 0 .4rem 2rem rgba(0, 0, 0, .2), inset 0 0 1px white;
+    background-position: 100% 100%;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .thumb {
+    width: 80vw;
+    max-width: 390px;
+    height: 130px;
+    overflow: hidden;
+    border-radius: 8px 8px 0 0;
+    
+    img {
+      width: 100%;
+    }
+  }
+
+  .copy {
+    position: absolute;
+    bottom: 0;
+    top: auto;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, .6);
+    backdrop-filter: blur(4px);
+    border-radius: 0 0 8px 8px;
+    
+    
+    .title {
+      font-weight: bolder;
+      font-size: 1.2rem;
+      margin-bottom: 0;
+    }
+    
+    .text {
+      font-size: .8rem;
+    }
+  }
+}
+
+/* --------- First Booking Block -------- */
+
+      .first-booking {
+        background-image: url("../img/spain_img1.png");
+        padding: 3em 8em;
+        display: flex;
+      }
+
+      .spain-block {
+        background-color: hsl(var(--clr-nero) / .9);
+        padding: 2em;
+        width: 40%;
+
+        &__text {
+          font-size: var(--fs-300);
+          font-family: var(--ff-josefinSans);
+        }
+
+        &__title {
+          font-size: var(--fs-300);
+          font-family: var(--ff-josefinSans);
+          font-weight: var(--fw-700);
+          text-transform: uppercase;
+          margin-bottom: 1em;
+        }
+
+        &__desc {
+          font-size: var(--fs-200);
+        }
+
+        ul {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+
+          li {
+            margin-bottom: .8em;
+          }
+        }
+      }
+
+      /* --------- second Booking Block -------- */
+
+      .second-booking {
+        background-image: url("../img/spain_img2.png");
+        background-size: cover;
+        padding: 3em 8em;
+        display: flex;
+        flex-direction: row-reverse;
+
+        &__block {
+          background-color: var(--clr-white);
+          opacity: .6;
+          border-radius: .5em;
+        }
+      }
+
+
+      /* --------- Tourist Block -------- */
+
+      .tourist-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: url("../img/tourist_bg_img.png");
+        background-size: cover;
+        padding: 5em 8em;
+
+        &__title {
+          font-size: var(--fs-600);
+          font-family: var(--ff-aleo);
+          color: var(--clr-white);
+          font-weight: var(--fw-700);
+          line-height: 3;
+        }
+
+        .tourist__content--desc {
+          color: var(--clr-white);
+        }
+      }
+
+      .tourist {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // gap: var(--gap, 3em);
+        background-color: hsl(var(--clr-nero) / .9);
+        width: 50vw;
+
+        &__content {
+          width: 60%;
+          padding: 2em;
+
+          &--subtitle {
+            font-size: var(--fs-300);
+            text-transform: uppercase;
+            font-family: var(--ff-josefinSans);
+          }
+
+          &--desc {
+            font-size: var(--fs-200);
+            font-family: var(--ff-josefinSans);
+
+          }
+          
+        }
+      }
+
+
+
+
+
+/* ======= Media Queries =========== */
+
+
+  @media screen and (max-width: 900px) {
+    .nav {
+      padding: 0 2em;
+      order: -1;
+    }
+    .banner {
+      &__search {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+      input {
+        width: 300px;
+      }
+
+      button {
+        width: 150px;
+        margin-top: .5em;
+      }
+    }
+  }
+  .choose {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3em 2em;
+    gap: var(--gap, 3em);
+
+    &__content {
+      width: 100%;
+      text-align: center; 
+    }
+      
+    &__image {
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      
+      &--first {
+        width: 300px;
+      }
+      &--second {
+          margin-left: 0;
+          width: 300px;
+        }
+    }
+  }
+
+  .first-booking {
+    padding: 3rem 2rem;
+  }
+
+  .second-booking {
+    padding: 3rem 2rem;
+  }
+
+  .spain-block {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav__topnav a {display: none;}
+  .nav__topnav a.icon {
+    float: right;
+    display: block;
+  }
+  .nav__topnav.responsive {position: relative; padding-top: 4em;}
+  .nav__topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .nav__topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+    
+  }
+
+  .tourist {
+    flex-direction: column;
+
+    &__content {
+      width: 100%;
+      padding: 2em;
+
+      &--subtitle {
+        text-align: center;
+      }
+    }
+  }
+  
+}
+
+
+
+@media screen and (max-width: 480px) {
+.nav {
+  padding: 0 .5em;
+
+  order: -1;
+}
+
+.banner {
+  &__search {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    input {
+      width: 200px;
+    }
+
+    button {
+      width: 70px;
+      margin-top: .5em;
+    }
+
+  }
+}
+
+.choose {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3em 2em;
+  gap: var(--gap, 3em);
+
+  &__content {
+    width: 100%;
+    text-align: center; 
+  }
+    
+  &__image {
+    // width: 50%;
+    
+    &--second {
+        margin-left: 0;
+      }
+  }
+}
+.first-booking {
+  padding: 3rem 2rem;
+}
+
+.second-booking {
+  padding: 3rem 2rem;
+}
+
+.spain-block {
+  width: 100%;
+  text-align: center;
+}
+
+.nav__topnav a {display: none;}
+  .nav__topnav a.icon {
+    float: right;
+    display: block;
+  }
+  .nav__topnav.responsive {
+    position: relative;
+    padding-top: 4em;
+  }
+  .nav__topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .nav__topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+    
+  }
+
+  .tourist {
+    flex-direction: column;
+    padding: 3rem 2rem;
+
+    &__content {
+      width: 100%;
+      padding: 2em;
+
+      &--subtitle {
+        text-align: center;
+      }
+    }
+  }
+}
+ 
+
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  /*# sourceMappingURL=style.css.map */
+  

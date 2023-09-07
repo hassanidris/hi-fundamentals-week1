@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/img/favicon.ico"
+    />
+
+    <title>Shenanigans</title>
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aleo&family=Josefin+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/66097af5f2.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- custom style -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <nav class="header__nav nav">
+      <div class="nav__logo">
+        <img src="assets/img/logo-sh.png" alt="Logo" />
+      </div>
+      <div class="nav__topnav" id="myTopnav">
+        <a href="#choose">Why Us</a>
+        <a href="#packages">Packages</a>
+        <a href="#">Travel With Us</a>
+        <!-- <a href="#">Contact Us</a> -->
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    </nav>
+    <header class="header">
+      <div class="banner">
+        <h1 class="banner__title">Shenanigans</h1>
+        <p class="banner__desc">Safe Travel Anywhere</p>
+      </div>
+    </header>
+    <section class="choose" id="choose">
+      <div class="choose__content">
+        <h2 class="choose__content--title">Why Choose Shenanigans?</h2>
+        <div class="slider-container">
+          <div class="card">
+            <a href="#" class="link">
+              <div class="thumb"></div>
+              <div class="copy">
+                <h3 class="title">Exceptional Experiences</h3>
+                <p class="text">
+                  At Shenanigans, we curate extraordinary cruise experiences
+                  that go beyond the ordinary.
+                </p>
+              </div>
+            </a>
+          </div>
+          <div class="card">
+            <a href="#" class="link">
+              <div class="thumb"></div>
+              <div class="copy">
+                <h3 class="title">Global Destinations</h3>
+                <p class="text">
+                  Our vast selection of cruise destinations spans the globe.
+                  From the sun-soaked beaches of the Caribbean.
+                </p>
+              </div>
+            </a>
+          </div>
+          <div class="card">
+            <a href="#" class="link">
+              <div class="thumb"></div>
+              <div class="copy">
+                <h3 class="title">Personalized Service</h3>
+                <p class="text">
+                  We believe in tailoring your cruise to your desires. Our team
+                  of experienced travel.
+                </p>
+              </div>
+            </a>
+          </div>
+          <div class="card">
+            <a href="#" class="link">
+              <div class="thumb"></div>
+              <div class="copy">
+                <h3 class="title">Best Price Guarantee</h3>
+                <p class="text">
+                  Enjoy peace of mind knowing you're getting the best value for
+                  your money with our price guarantee.
+                </p>
+              </div>
+            </a>
+          </div>
+          <div class="card">
+            <a href="#" class="link">
+              <div class="thumb"></div>
+              <div class="copy">
+                <h3 class="title">Safety First</h3>
+                <p class="text">
+                  Your safety is our top priority. We only partner with
+                  reputable cruise lines that meet the highest safety.
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- <section class="first-booking">
+      <article class="first-booking__block spain-block">
+        <h4 class="spain-block__text">Spain</h4>
+        <h3 class="spain-block__title">Grand Spain Madrid</h3>
+        <p class="spain-block__desc">
+          But I must explain to you how all this mistaken idea of account to
+          denouncing pleasure and praising pain was account born and I account
+          will give you a complete account of the system
+        </p>
+        <button type="submit" class="section-btn">Book Now</button>
+      </article>
+    </section> -->
+    <section class="second-booking" id="packages">
+      <article class="second-booking__block spain-block">
+        <h3 class="spain-block__title">Explore Our Cruise Selection</h3>
+        <ul>
+          <li>
+            <b>Luxury Cruises:</b> Indulge in opulence aboard our luxury cruise
+            ships, where impeccable service and exquisite amenities await.
+          </li>
+          <li>
+            <b>Adventure Cruises:</b> For the thrill-seekers, embark on an
+            adventure of a lifetime with our action-packed adventure cruises.
+          </li>
+          <li>
+            <b>Family Cruises:</b> Create cherished memories with your loved
+            ones on family-friendly cruises that offer fun activities for all
+            ages.
+          </li>
+          <li>
+            <b>Romantic Getaways:</b> Ignite the spark with our romantic cruise
+            packages, ideal for honeymooners and couples seeking a romantic
+            escape.
+          </li>
+        </ul>
+
+        <button type="submit" class="section-btn">Book Now</button>
+      </article>
+    </section>
+    <section class="tourist-block">
+      <h2 class="tourist-block__title">Book Your Voyage Today</h2>
+      <article class="tourist-block__article tourist">
+        <div class="tourist__image">
+          <img src="assets/img/tourist_img.png" alt="Seeing Mountian" />
+        </div>
+        <div class="tourist__content">
+          <!-- <h2 class="tourist__content--subtitle">Sam Sumon</h2> -->
+
+          <p class="tourist__content--desc">
+            Ready to set sail on the adventure of your dreams? Booking your
+            cruise with Shenanigans is simple and stress-free. Our user-friendly
+            website allows you to browse our cruise offerings, select your
+            preferred itinerary, and book your voyage with ease.
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "nav__topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "nav__topnav";
+        }
+      }
+    </script>
+  </body>
+</html>
