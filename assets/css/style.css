@@ -208,7 +208,7 @@ a {
   transition: all 0.4s ease-in-out;
 }
 .card:nth-child(2) {
-  background-image: url(/assets/img/sl_global-destinations.png);
+  background-image: url(/assets/img/spain_img1.png);
 }
 .card:nth-child(3) {
   background-image: url(/assets/img/sl_personalized-service.jpeg);
