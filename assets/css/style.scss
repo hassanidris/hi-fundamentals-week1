@@ -120,18 +120,16 @@
   background: url(../img/bnr_img.png) no-repeat;
   background-size: cover;
   background-position: top left;
-  // z-index: -99999;
   
 }
   
 .nav {
-  // position: fixed;
   display: flex;
   flex-basis: 100%;
   gap: var(--gap, 0.6rem);
   justify-content: space-between;
   align-items: center;
-  padding: 0 6em;
+  padding: .2em 6em;
   background-color: var(--clr-white);
   order: 2;
   width: 100%;
@@ -141,7 +139,7 @@
 
   &__logo {
     // display: block;
-    width: 200px;
+    width: 250px;
   }
 
   &__topnav {
@@ -198,7 +196,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 3em 8em;
+  padding: 4em 8em;
   gap: var(--gap, 3em);
 
   &__content {
@@ -248,7 +246,7 @@
   position: relative;
   height: 320px;
   margin: 2rem 1rem;
-  background-image: url('/assets/img/sl_exceptional-experiences.jpg');
+  background-image: url('https://unsplash.com/photos/YYtgQNhmJSY');
   background-repeat: no-repeat;
   background-color: white;
   background-position: 100% 90%;
