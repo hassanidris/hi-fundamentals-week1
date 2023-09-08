@@ -110,7 +110,6 @@ a {
   background: url(../img/bnr_img.png) no-repeat;
   background-size: cover;
   background-position: top left;
-  z-index: -99999;
 }
 
 .nav {
@@ -123,6 +122,9 @@ a {
   background-color: var(--clr-white);
   order: 2;
   width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 999999;
 }
 .nav__logo {
   width: 200px;
