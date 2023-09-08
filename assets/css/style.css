@@ -204,7 +204,7 @@ a {
   position: relative;
   height: 320px;
   margin: 2rem 1rem;
-  background-image: url("https://unsplash.com/photos/YYtgQNhmJSY");
+  background-image: url("../assets/img/sl_exceptional-experiences.jpg");
   background-repeat: no-repeat;
   background-color: white;
   background-position: 100% 90%;
@@ -216,16 +216,16 @@ a {
   transition: all 0.4s ease-in-out;
 }
 .card:nth-child(2) {
-  background-image: url("/assets/img/sl_global-destinations.jpg");
+  background-image: url("../assets/img/sl_global-destinations.jpg");
 }
 .card:nth-child(3) {
-  background-image: url("/assets/img/sl_personalized-service.jpg");
+  background-image: url("../assets/img/sl_personalized-service.jpg");
 }
 .card:nth-child(4) {
-  background-image: url("/assets/img/sl_best-price-guarantee.jpg");
+  background-image: url("../assets/img/sl_best-price-guarantee.jpg");
 }
 .card:nth-child(5) {
-  background-image: url("/assets/img/sl_safety-first.jpg");
+  background-image: url("../assets/img/sl_safety-first.jpg");
 }
 .card:hover {
   box-shadow: 0 0.4rem 2rem rgba(0, 0, 0, 0.2), inset 0 0 1px white;
