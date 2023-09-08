@@ -1,3 +1,3 @@
 ## Design Layout
 
-<img src=“/assets/img/design.png”>
+![Test Image 3](/assets/img/design.png)
